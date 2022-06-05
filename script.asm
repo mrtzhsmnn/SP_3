@@ -4,11 +4,11 @@ section .text
   global _start
 
 _start:
-  xor rcx, rcx
-  push rcx
-  mov rcx, 0x68732f6e69622fff
-  shr rcx, 8
-  push rcx
+  xor rcx, rcx 
+  push rcx 
+  mov rcx, 0x68732f6e69622fff 
+  shr rcx, 8 
+  push rcx 
   push rsp
   pop rdi
 
