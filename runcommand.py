@@ -47,7 +47,8 @@ if len(sys.argv) == 4:
     f = open("a.txt", "r+")
     shellcode = f.read()
     shellcode = bytes(shellcode, 'utf-8')
-    shellcode = shellcode.decode('unicode_escape').encode("raw_unicode_escape")
+    shellcode = shellcode.decode('unicode_escape')\
+        .encode("raw_unicode_escape")
     f.close()
 
     os.system("rm a.txt")
