@@ -60,5 +60,5 @@ if len(sys.argv) == 4:
 else:
     print("Wie folgt zu Benutzen:", "Programmname:", sys.argv[0],
           "Bufferadresse", "Assemblerprogramm",
-          "'Linux Bash Befehl'")
+          "'Linux Programm'")
     sys.exit(0)
