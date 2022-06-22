@@ -23,3 +23,18 @@ https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-
 ### Moritz:
   
   
+# Besprechung vom 22.06.2022
+## Bereits erledigt:
+### Python:
++ Übergabe von asm nicht ändern
++ Ausgabe erweitert für Usage
+
+### Doku:
++ LSTListings abgeändert
++ Fragezeichen Ignorieren
+
+### TODO:
+- [ ] Zeilenreferenzen prüfen 
+- [ ] Kommentare in Python
+- [ ] Friedrich: Struktur von Nico kopieren
+- [ ] Nico: Kommentare von Friedrich kopieren
