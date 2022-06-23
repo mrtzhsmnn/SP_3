@@ -48,7 +48,7 @@ if len(sys.argv) == 4:  # Sofern 3 Argumente übergeben wurden
     shellcode= f.read()  # Datei a.txt in Zeichenkette "shellcode" schreiben
     shellcode=bytes(shellcode, 'utf-8')  # Zeichenkette in Bytes umwandeln
     shellcode=shellcode.decode('unicode_escape').encode\
-    ("raw_unicode_escape")  #Doppelte Backslashs entfernen
+    ("raw_unicode_escape")  # Doppelte Backslashs entfernen
     f.close()  # Datei a.txt schließen
 
     os.system("rm a.txt")  # Datei a.txt löschen
@@ -61,4 +61,4 @@ else:  # Anderfalls
     print("Wie folgt zu Benutzen:", "Programmname:", sys.argv[0],
           "Bufferadresse", "Pfad zum Assemblerprogramm",
           "'Linux Programm'")  # Ausgabe mit Hinweis auf korrekte Angabe der Parameter
-    sys.exit(0)  # Programm beendenS
+    sys.exit(0)  # Programm beenden
